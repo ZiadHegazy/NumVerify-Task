@@ -1,0 +1,45 @@
+.LoginMainDiv{
+    height: 100%;
+    background-color: #E5E5E5;
+    
+}
+.LoginFlexColumn{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vw;
+    position: relative;
+    top: 15%;
+}
+.LoginLoginbtn{
+    background-color: #224957;
+    color: white;
+    border-radius: 10px;
+    width: 15vw;
+    height: 2vw;
+}
+.Loginusername{
+    background-color: #224957;
+    color: white;
+    border-radius: 10px;
+    width: 15vw;
+    height: 2vw;
+}
+.Loginusername::placeholder{
+    color: white;
+}
+.LoginLoginbtn{
+    background: #20DF7F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color:#224957;
+    width: 15.5vw;
+    height: 2vw;
+}
+.LoginLoginbtn:hover{
+    cursor: pointer;
+    background-color: #189d5a;
+    transition: 0.5s;
+}

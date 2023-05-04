@@ -1,0 +1,21 @@
+.SearchHistMainDiv{
+    height: 100%;
+    background-color: #E5E5E5;
+}
+.SearchHistFlex{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vw;
+    position: relative;
+    top: 5%;
+}
+.FilterHistory{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5vw;
+    align-items: center;
+    justify-content: center;
+}

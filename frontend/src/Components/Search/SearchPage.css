@@ -1,0 +1,49 @@
+.SearchPageMaindiv{
+    height: 100%;
+    background-color: #E5E5E5;
+}
+.SearchPageflex{display: flex;
+    flex-direction: column;
+    flex-grow: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vw;
+    position: relative;
+    top: 5%;
+}
+.SearchPageSearchbar{
+    background-color: #224957;
+    color: white;
+    border-radius: 10px;
+    width: 23vw;
+    height: 2vw;
+}
+.SearchPageSearchbar::placeholder{
+    color: white;
+}
+.SearchPagesearchbtn{
+    background: #20DF7F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color:white;
+    width: 10vw;
+    height: 2vw;
+}
+.SearchPagesearchbtn:hover{
+    cursor: pointer;
+    background-color: #189d5a;
+    transition: 0.5s;
+}
+table {
+    border: 2px solid forestgreen;
+    width: 39%;
+    height: 200px;
+  }
+    
+  th {
+    border-bottom: 1px solid black;
+  }
+    
+  td {
+    text-align: center;
+  }

@@ -1,0 +1,38 @@
+.RegisterMaindiv{
+    height: 100%;
+    background-color: #E5E5E5;
+}
+.Registerflexdiv{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1 1 0;
+    align-items: center;
+    justify-content: center;
+    row-gap: 2vw;
+    position: relative;
+    top: 5%;
+
+}
+.Registerusername{
+    background-color: #224957;
+    color: white;
+    border-radius: 10px;
+    width: 15vw;
+    height: 2vw;
+}
+.Registerusername::placeholder{
+    color: white;
+}
+.RegisterRegisterbtn{
+    background: #20DF7F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color:white;
+    width: 15.5vw;
+    height: 2vw;
+}
+.RegisterRegisterbtn:hover{
+    cursor: pointer;
+    background-color: #189d5a;
+    transition: 0.5s;
+}
