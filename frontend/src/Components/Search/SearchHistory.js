@@ -1,8 +1,12 @@
 import { useState } from "react"
-import { getAllSearch } from "../../API/Search"
+import { filterAllSearch, getAllSearch } from "../../API/Search"
 import './SearchHistory.css'
+import './SearchPage.css'
 import  withAuth  from "../Authentication/RequireAuth"
 function SearchHistory(){
+    const [filternumber,setFilterNumber]=useState("")
+    const [filterDate,setFilterDate]=useState("")
+    const [filterValid,setFilterValid]=useState("")
     const data = [
         { name: "Anom", age: 19, gender: "Male" },
         { name: "Megha", age: 19, gender: "Female" },
@@ -11,6 +15,7 @@ function SearchHistory(){
     const[history,setHistory]=useState([{ name: "Anom", age: 19, gender: "Male" },
     { name: "Megha", age: 19, gender: "Female" },
     { name: "Subham", age: 25, gender: "Male"}])
+    const[filteredHistory,setFilteredHistory]=useState([])
     const[first,setFirst]=useState(0)
     const begin=async()=>{
         setHistory(await getAllSearch())
@@ -18,6 +23,32 @@ function SearchHistory(){
     }
     if(first==0){
         begin()
+    }
+    const handleNumber=(event)=>{
+        setFilterNumber(event.target.value)
+    }
+    const handleValid=(event)=>{
+        if(event.target.value=="all"){
+            setFilterValid("")
+        }else{
+            setFilterValid(event.target.value)
+        }
+        
+    }
+    const handleDate=(event)=>{
+        var arr=event.target.value.split("-")
+        var day=arr[2]
+        var month=arr[1]
+        var year=arr[0]
+        var date=day+"-"+month+"-"+year
+        setFilterDate(date)
+        
+    }
+    const handleFilter=async()=>{
+        const results=await filterAllSearch(filternumber,filterDate,filterValid)
+        setHistory(results)
+
+
     }
     const RestofRows=()=>{
         var table=document.getElementById("tabletoadd")
@@ -38,7 +69,17 @@ function SearchHistory(){
     return(
         <div className="SearchHistMainDiv">
             <div className="SearchHistFlex">
-            <div className="FilterHistory"></div>
+            <div className="FilterHistory">
+                <label><strong>Filter By</strong></label>
+                <input className="SearchPageSearchbarHistory" onChange={handleDate} type="date" placeholder="Search date"/>
+                <input className="SearchPageSearchbar" onChange={handleNumber} type="text" placeholder="Enter number"/>
+                <select className="SearchPageSearchbarHistory"  onChange={handleValid} placeholder="Select validity">
+                    <option>all</option>
+                    <option>true</option>
+                    <option>false</option>
+                </select>
+                <button onClick={handleFilter} className="SearchPagesearchbtn">Filter</button>
+            </div>
             <table id="tabletoadd">
              <tr>
                 <th>Phone Number</th>

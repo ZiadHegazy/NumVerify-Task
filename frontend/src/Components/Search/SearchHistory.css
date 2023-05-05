@@ -19,3 +19,14 @@
     align-items: center;
     justify-content: center;
 }
+.SearchPageSearchbarHistory{
+
+background-color: #224957;
+    color: white;
+    border-radius: 10px;
+    width: 10vw;
+    height: 2vw;
+}
+.SearchPageSearchbarHistory::placeholder{
+    color: white;
+}

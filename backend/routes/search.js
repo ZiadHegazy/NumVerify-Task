@@ -83,7 +83,7 @@ router.get("/filterSearch/:number/:date/:status/:token",async function(req,res){
         var status=req.params.status
         var query={}
         if(number!=-1){
-            query.number=number
+            query.phoneNumber=number
         }
         if(date != -1){
             query.date=date
@@ -91,7 +91,10 @@ router.get("/filterSearch/:number/:date/:status/:token",async function(req,res){
         if(status!=-1){
             query.status=status
         }
-        var results=await Search.find({query})
+        
+        console.log({phoneNumber:query.phoneNumber,date:query.date,status:query.status})
+        var results=await Search.find(query)
+        
         res.json(results)
     }catch{
         res.json("error")

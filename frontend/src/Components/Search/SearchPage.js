@@ -29,10 +29,27 @@ function SearchPage(){
              <tr>
                 <th>Phone Number</th>
                 <th>Valid</th>
+                <th>Local Format</th>
+                <th>international_format</th>
+                <th>country_prefix</th>
+                <th>country_code</th>
+                <th>country_name</th>
+                <th>location</th>
+                <th>carrier</th>
+                <th>line_type</th>
             </tr>
             <tr>
             <td>{number}</td>
                 <td>{result.valid+""}</td>
+                <td>{result.local_format+""}</td>
+                <td>{result.international_format+""}</td>
+                <td>{result.country_prefix+""}</td>
+                <td>{result.country_code+""}</td>
+                <td>{result.country_name+""}</td>
+                <td>{result.location+""}</td>
+                <td>{result.carrier+""}</td>
+                <td>{result.line_type+""}</td>
+                
             </tr>
            </table>
         )
