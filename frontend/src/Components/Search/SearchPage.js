@@ -30,13 +30,13 @@ function SearchPage(){
                 <th>Phone Number</th>
                 <th>Valid</th>
                 <th>Local Format</th>
-                <th>international_format</th>
-                <th>country_prefix</th>
-                <th>country_code</th>
-                <th>country_name</th>
-                <th>location</th>
+                <th>international format</th>
+                <th>country prefix</th>
+                <th>country code</th>
+                <th>country name</th>
+                
                 <th>carrier</th>
-                <th>line_type</th>
+                <th>line type</th>
             </tr>
             <tr>
             <td>{number}</td>
@@ -46,7 +46,7 @@ function SearchPage(){
                 <td>{result.country_prefix+""}</td>
                 <td>{result.country_code+""}</td>
                 <td>{result.country_name+""}</td>
-                <td>{result.location+""}</td>
+            
                 <td>{result.carrier+""}</td>
                 <td>{result.line_type+""}</td>
                 

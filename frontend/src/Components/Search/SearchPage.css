@@ -15,6 +15,7 @@
     background-color: #224957;
     color: white;
     border-radius: 10px;
+    text-align: center;
     width: 23vw;
     height: 2vw;
 }
@@ -26,8 +27,8 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     color:white;
-    padding: 0.5vw;
     
+    text-align: center;
     width: 15vw;
     height: 2vw;
 }
@@ -48,4 +49,5 @@ table {
     
   td {
     text-align: center;
+    padding: 2vw;
   }
